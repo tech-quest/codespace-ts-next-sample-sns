@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import styles from './styles.module.css';
 
 type CommonProps = {
@@ -17,9 +19,9 @@ type Props = ButtonProps | LinkProps;
 export const Button = (props: Props) => {
   if (props.type === 'link') {
     return (
-      <a href={props.href} className={styles.root}>
+      <Link href={props.href} className={styles.root}>
         {props.children}
-      </a>
+      </Link>
     );
   }
 

@@ -1,4 +1,5 @@
 import { FluidImage } from '~/components/elements/images/fluid-image';
+import { NavLink } from '~/components/elements/links/nav-link';
 
 import styles from './styles.module.css';
 
@@ -13,7 +14,11 @@ export const SiteMenuBar = () => {
           Tech Quest SNS
         </h1>
       </div>
-      <div></div>
+      <nav className={styles.menu}>
+        <NavLink href="/" className={styles.item}>
+          Home
+        </NavLink>
+      </nav>
     </div>
   );
 };
