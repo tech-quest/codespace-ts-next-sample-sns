@@ -1,0 +1,26 @@
+.root {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #4baf4f;
+  border-color: #4baf4f;
+  color: #fff;
+  line-height: 1.2;
+  transition:
+    background-color 200ms cubic-bezier(0, 0, 0.2, 1),
+    border-color 200ms cubic-bezier(0, 0, 0.2, 1),
+    color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+.root:hover {
+  text-decoration: none;
+}
+.root:disabled {
+  cursor: not-allowed;
+  background-color: #90a4ae;
+  border-color: #90a4ae;
+}

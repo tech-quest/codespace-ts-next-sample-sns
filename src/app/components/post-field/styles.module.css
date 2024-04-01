@@ -1,0 +1,23 @@
+.root {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  padding: 0.5em;
+}
+.root + .root {
+  border-top: 1px solid #90a4ae;
+}
+
+.thumbnail {
+  width: 40px;
+}
+
+.field {
+  flex: 1;
+}
+.field > *:first-child {
+  margin-top: 0;
+}
+.field > *:last-child {
+  margin-bottom: 0;
+}
