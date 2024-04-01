@@ -10,7 +10,7 @@ type Props = Omit<ComponentProps<typeof Link>, 'href'> & {
 
 export const NavLink = ({ children, ...props }: Props) => {
   const pathname = usePathname();
-  const isActive = pathname.indexOf(props.href) === 0;
+  const isActive = pathname === props.href;
 
   return (
     <Link {...props} className={props.className} data-active={isActive}>
