@@ -18,6 +18,9 @@ export const SiteMenuBar = () => {
         <NavLink href="/" className={styles.item}>
           Home
         </NavLink>
+        <NavLink href="/friends" className={styles.item}>
+          Friends
+        </NavLink>
       </nav>
     </div>
   );
