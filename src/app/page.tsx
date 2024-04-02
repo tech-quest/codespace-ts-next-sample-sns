@@ -5,12 +5,17 @@ import { useState } from 'react';
 import { Button } from '~/components/elements/buttons/button';
 import { MyMultilineString } from '~/components/elements/typographies/multiline-string';
 
+// MEMO: 投稿を表示するための見た目をコンポーネントとして作成して重複したコードを避ける
 import { PostField } from './components/post-field';
+// MEMO: CSS Modules という機能を使ってスタイルを設定する
+// 参考: https://nextjs.org/docs/app/building-your-application/styling/css-modules
 import styles from './styles.module.css';
 
 export default function HomePage() {
+  // MEMO: 未入力時に Post ボタンを無効化させるための state を作成
   const [disabled, setDisabled] = useState(true);
 
+  // MEMO: テキストエリアの入力値が変更された際に Post ボタンの有効・無効を切り替える
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setDisabled(e.target.value === '');
   };
