@@ -4,15 +4,11 @@ import { useState } from 'react';
 
 import { Button } from '~/components/elements/buttons/button';
 import { MyMultilineString } from '~/components/elements/typographies/multiline-string';
-import { fetchPosts } from '~/data';
 
 import { PostField } from './components/post-field';
 import styles from './styles.module.css';
 
 export default function HomePage() {
-  // MEMO: 表示用の投稿一覧データを取得
-  const posts = fetchPosts();
-
   const [disabled, setDisabled] = useState(true);
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -30,20 +26,114 @@ export default function HomePage() {
         </div>
       </PostField>
       <div className={styles.timelines}>
-        {/* 取得したデータを HTML 形式に変換して表示させる */}
-        {posts.map((post) => (
-          <PostField key={post.id} thumbnail={post.account.image}>
-            <div className={styles.poster}>
-              <div className={styles.name}>{post.account.displayName}</div>
-              <div className={styles.identity}>
-                @{post.account.name} {post.postedAt}
-              </div>
-            </div>
-            <p>
-              <MyMultilineString value={post.content} />
-            </p>
-          </PostField>
-        ))}
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value="DUMMY DUMMY DUMMY" />
+          </p>
+        </PostField>
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value={`改行の場合は \\n を渡す。\n\nDUMMY DUMMY DUMMY`} />
+          </p>
+        </PostField>
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value="DUMMY DUMMY DUMMY" />
+          </p>
+        </PostField>
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value={`改行の場合は \\n を渡す。\n\nDUMMY DUMMY DUMMY`} />
+          </p>
+        </PostField>
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value="DUMMY DUMMY DUMMY" />
+          </p>
+        </PostField>
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value={`改行の場合は \\n を渡す。\n\nDUMMY DUMMY DUMMY`} />
+          </p>
+        </PostField>
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value="DUMMY DUMMY DUMMY" />
+          </p>
+        </PostField>
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value={`改行の場合は \\n を渡す。\n\nDUMMY DUMMY DUMMY`} />
+          </p>
+        </PostField>
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value="DUMMY DUMMY DUMMY" />
+          </p>
+        </PostField>
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value={`改行の場合は \\n を渡す。\n\nDUMMY DUMMY DUMMY`} />
+          </p>
+        </PostField>
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value="DUMMY DUMMY DUMMY" />
+          </p>
+        </PostField>
+        <PostField thumbnail="/images/photo-profile-02.jpg">
+          <div className={styles.poster}>
+            <div className={styles.name}>DUMMY 投稿者</div>
+            <div className={styles.identity}>@DUMMYId</div>
+          </div>
+          <p>
+            <MyMultilineString value={`改行の場合は \\n を渡す。\n\nDUMMY DUMMY DUMMY`} />
+          </p>
+        </PostField>
       </div>
     </div>
   );
