@@ -1,11 +1,18 @@
 import { accounts } from './accounts';
 import { posts } from './posts';
 
-type Post = {
+export type Post = {
   id: number;
   content: string;
   account: { id: number; name: string; displayName: string; image: string };
   postedAt: string;
+};
+export type Account = {
+  id: number;
+  name: string;
+  displayName: string;
+  image: string;
+  bio: string;
 };
 
 export const fetchPosts = (): Post[] => {
@@ -29,8 +36,12 @@ export const fetchPosts = (): Post[] => {
     .filter(isPost);
 };
 
-export const fetchFriends = () => {
+export const fetchFriends = (): Account[] => {
   return accounts.filter((account) => account.id !== 1);
+};
+
+export const fetchMyAccount = (): Account => {
+  return accounts.find((account) => account.id === 1) || accounts[0];
 };
 
 const isPost = (post: Post | null): post is Post => {

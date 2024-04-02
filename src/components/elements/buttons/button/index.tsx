@@ -26,7 +26,7 @@ export const Button = (props: Props) => {
   }
 
   return (
-    <button type={props.type} disabled={props.isDisabled} className={styles.root}>
+    <button type={props.type} disabled={props.isDisabled} className={styles.root} onClick={props.onClick}>
       {props.children}
     </button>
   );

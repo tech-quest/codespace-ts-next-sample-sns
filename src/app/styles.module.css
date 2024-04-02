@@ -8,7 +8,7 @@
 .textarea {
   display: block;
   width: 100%;
-  height: calc(2em * 1.4);
+  height: calc(4em * 1.4);
   padding: 0.5em;
   border: none;
   line-height: 1.4;
@@ -16,7 +16,6 @@
   outline: none;
 }
 .textarea:focus {
-  height: calc(4em * 1.4);
   border-bottom: 1px solid #90a4ae;
 }
 
