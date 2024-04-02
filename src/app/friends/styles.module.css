@@ -38,3 +38,12 @@
   border-top: 1px solid #90a4ae;
   border-bottom: 1px solid #90a4ae;
 }
+
+.name {
+  font-weight: bold;
+}
+
+.identity {
+  color: #90a4ae;
+  font-weight: normal;
+}
