@@ -28,8 +28,8 @@ export default function HomePage() {
       <div className={styles.timelines}>
         <PostField thumbnail="/images/photo-profile-02.jpg">
           <div className={styles.poster}>
-            <div className={styles.name}>投稿者A</div>
-            <div className={styles.identity}>@accountId</div>
+            <div className={styles.name}>コータ</div>
+            <div className={styles.identity}>@kotaaaaaa 2024年03月14日 19時05分</div>
           </div>
           <p>
             <MyMultilineString value="今日は晴れですね。" />
@@ -37,8 +37,8 @@ export default function HomePage() {
         </PostField>
         <PostField thumbnail="/images/photo-profile-03.jpg">
           <div className={styles.poster}>
-            <div className={styles.name}>投稿者B</div>
-            <div className={styles.identity}>@accountId</div>
+            <div className={styles.name}>みきてぃ</div>
+            <div className={styles.identity}>@mikitea 2024年03月14日 19時00分</div>
           </div>
           <p>
             <MyMultilineString
