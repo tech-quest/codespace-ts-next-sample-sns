@@ -8,6 +8,7 @@ import { ProfileField } from './components/profile-field';
 import styles from './styles.module.css';
 
 export default function FriendsPage() {
+  // MEMO: 表示用の投稿一覧データを取得
   const friends = fetchFriends();
 
   return (
@@ -19,6 +20,7 @@ export default function FriendsPage() {
         <h1 className={styles.heading}>フレンド一覧</h1>
       </div>
       <div className={styles.friends}>
+        {/* 取得したデータを HTML 形式に変換して表示させる */}
         {friends.map((friend) => (
           <ProfileField key={friend.id} thumbnail={friend.image}>
             <div className={styles.name}>{friend.displayName}</div>
